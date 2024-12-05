@@ -1,4 +1,4 @@
-package uz.code.study_center;
+package uz.code;
 
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -9,9 +9,11 @@ import javax.servlet.annotation.WebListener;
 
 @WebListener
 public class MyListener implements ServletContextListener {
+
+    public static EntityManagerFactory EMF;
+
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
-
+        EMF = Persistence.createEntityManagerFactory("study_center_project");
     }
 }
