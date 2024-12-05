@@ -34,7 +34,6 @@ public class AddModuleServlet extends HttpServlet {
 
             entityManager.getTransaction().begin();
             Modules module = new Modules(
-                    null,
                     name,
                     course);
             entityManager.persist(module);

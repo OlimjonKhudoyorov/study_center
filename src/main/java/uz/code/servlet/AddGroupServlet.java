@@ -34,7 +34,6 @@ public class AddGroupServlet extends HttpServlet {
 
             entityManager.getTransaction().begin();
             Groups module = new Groups(
-                    null,
                     name,
                     modules);
             entityManager.persist(module);
